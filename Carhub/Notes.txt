@@ -1,0 +1,131 @@
+
+THINGS POSSIBLE IN AURA BUT NOT POSSIBLE IN LWC
+==============================================
+
+1. FLEXIPAGE / APP PAGE TEMPLATES
+--------------------------------
+Aura:
+- Can create Home/App/Record page templates
+- Implements lightning:appHomeTemplate
+
+LWC:
+- Cannot create FlexiPage templates
+- Can only be placed inside templates
+
+Interview Point:
+FlexiPage templates are supported only in Aura.
+
+------------------------------------------------
+
+2. DYNAMIC COMPONENT CREATION
+-----------------------------
+Aura:
+- Can dynamically create components at runtime using $A.createComponent
+
+LWC:
+- Cannot dynamically create components at runtime
+- Only conditional rendering is allowed
+
+------------------------------------------------
+
+3. COMPONENT & APPLICATION EVENTS
+---------------------------------
+Aura:
+- Supports Component Events
+- Supports Application Events
+- Event bubbling and capture phases
+
+LWC:
+- No application events
+- Uses standard DOM Custom Events only
+
+------------------------------------------------
+
+4. ACCESS TO $A GLOBAL OBJECT
+-----------------------------
+Aura:
+- Can use $A.get(), $A.enqueueAction(), force events
+
+LWC:
+- $A is not accessible
+- Must use alternative APIs
+
+------------------------------------------------
+
+5. FORCE EVENTS (AURA-ONLY)
+---------------------------
+Examples:
+- force:refreshView
+- force:navigateToSObject
+
+Aura:
+- Fully supported
+
+LWC:
+- Not supported (some have alternatives)
+
+------------------------------------------------
+
+6. DYNAMIC ATTRIBUTE TYPES
+--------------------------
+Aura:
+- Can define attributes of type Aura.Component[]
+- Can accept dynamic component lists
+
+LWC:
+- No dynamic attribute typing
+- No component array attributes
+
+------------------------------------------------
+
+7. CROSS-NAMESPACE DYNAMIC LOADING
+---------------------------------
+Aura:
+- Can dynamically load components across namespaces
+
+LWC:
+- Strict namespace isolation
+- Static imports only
+
+------------------------------------------------
+
+8. MULTIPLE ROOT ELEMENTS
+------------------------
+Aura:
+- Supports multiple root elements
+
+LWC:
+- Requires a single <template> root
+
+------------------------------------------------
+
+9. SERVER-SIDE ACTION QUEUE CONTROL
+----------------------------------
+Aura:
+- setStorable()
+- $A.enqueueAction()
+- Action queue control
+
+LWC:
+- No explicit queue control
+- Uses @wire caching only
+
+------------------------------------------------
+
+10. DIRECT DOM MANIPULATION
+---------------------------
+Aura:
+- More freedom to directly manipulate DOM
+
+LWC:
+- Strict Shadow DOM rules
+- Controlled DOM access
+
+------------------------------------------------
+
+FINAL INTERVIEW SUMMARY
+----------------------
+LWC is the recommended modern framework for Salesforce development,
+but Aura is still required for certain platform-level capabilities
+such as FlexiPage templates and dynamic component creation.
+
